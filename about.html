@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About - ZF</title>
+<style>
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#ffffff; min-height:100vh; display:flex; flex-direction:column; }
+header { background:#24478f; color:white; padding:1rem; display:flex; justify-content:space-between; position:sticky; top:0; z-index:1000; }
+header .logo { font-weight:bold; font-size:1.5rem; }
+nav { display:flex; gap:0.5rem; }
+nav a { text-decoration:none; color:white; padding:0.5rem 1rem; border-radius:4px; transition: background 0.3s; }
+nav a:hover { background:#1a356d; }
+nav a.active { background:#1a356d; }
+
+/* Dark blue section */
+.intro-section { background:#1a356d; color:white; text-align:center; padding:4rem 1rem; display:flex; flex-direction:column; justify-content:center; align-items:center; opacity:0; transform:translateY(30px); transition:opacity 1s ease-out, transform 1s ease-out; }
+.intro-section.show { opacity:1; transform:translateY(0); }
+.intro-section h1 { margin:0; font-size:2.5rem; font-weight:bold; }
+.intro-section p { margin-top:1rem; font-size:1.25rem; }
+.contact-boxes { display:flex; justify-content:center; gap:2rem; margin-top:2rem; flex-wrap:wrap; }
+.contact-box { background:transparent; border:2px solid white; color:white; padding:1rem 2rem; border-radius:8px; display:flex; flex-direction:column; align-items:center; gap:0.25rem; font-size:1rem; transition:background 0.3s; cursor:pointer; opacity:0; transform:translateY(30px); transition:opacity 1s ease-out, transform 1s ease-out; }
+.contact-box.show { opacity:1; transform:translateY(0); }
+.contact-box:hover { background:rgba(255,255,255,0.2); }
+.contact-box img { width:24px; height:24px; }
+.contact-box small { font-size:0.8rem; }
+
+.about-section { flex:1; padding:3rem 2rem; background:white; display:flex; flex-direction:column; gap:2rem; }
+.box-row { display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; }
+.about-box { flex:1; min-width:280px; background:#f5f5f5; border:2px solid #24478f; border-radius:8px; padding:2rem; opacity:0; transform:translateY(30px); transition:opacity 1s ease-out, transform 1s ease-out; cursor:pointer; }
+.about-box.show { opacity:1; transform:translateY(0); }
+.about-box:hover { box-shadow:0 0 10px rgba(0,0,0,0.2); }
+.about-box h2 { margin-bottom:1rem; font-size:1.8rem; display:flex; align-items:center; }
+.about-box h2 img { width:24px; height:24px; margin-right:8px; }
+
+/* Only make Skills icon slightly bigger */
+.about-box h2 img.skills-icon { width:28px; height:28px; }
+
+.about-box p, .about-box ul { font-size:1.1rem; line-height:1.6; }
+.about-box ul { padding-left:1.5rem; }
+.footer-section { background:#142f5a; color:white; text-align:center; padding:2rem; font-size:1rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">ZF</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="index.html#footer-contact">Contact</a>
+  </nav>
+</header>
+
+<div class="intro-section" id="intro">
+  <h1>Zaid Fahad</h1>
+  <p>Electrical Engineering Student at TMU</p>
+  <div class="contact-boxes">
+    <div class="contact-box">
+      <img src="images/email.png" alt="Email Icon">
+      <strong>Email</strong>
+      <small>zaidfahad2019@gmail.com</small>
+    </div>
+    <div class="contact-box">
+      <img src="images/phone.png" alt="Phone Icon">
+      <strong>Telephone</strong>
+      <small>+1 (234) 567-890</small>
+    </div>
+    <a href="https://www.linkedin.com/in/zaid-fahad-7b001832b" target="_blank" style="text-decoration:none;">
+      <div class="contact-box">
+        <img src="images/linkedin.png" alt="LinkedIn Icon">
+        <strong>LinkedIn</strong>
+        <small>linkedin.com/in/zaidfahad</small>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="about-section">
+  <div class="box-row">
+    <div class="about-box">
+      <h2><img src="images/about.png" alt="About Icon"> About Me</h2>
+      <p>I am an Electrical Engineering student with interests spanning software applications, media design, and innovative technologies. I enjoy combining technical problem-solving with creative design to build meaningful solutions.</p>
+    </div>
+    <div class="about-box">
+      <h2><img src="images/skills.png" alt="Skills Icon" class="skills-icon"> Skills</h2>
+      <ul>
+        <li>Electrical Circuit Design</li>
+        <li>Programming (Python, C++)</li>
+        <li>Embedded Systems</li>
+        <li>Media & Graphic Design</li>
+        <li>Team Collaboration</li>
+      </ul>
+    </div>
+  </div>
+  <div class="box-row">
+    <div class="about-box">
+      <h2><img src="images/tech.png" alt="Technical Skills Icon"> Technical Skills</h2>
+      <ul>
+        <li>MATLAB & Simulink</li>
+        <li>Microcontroller Programming</li>
+        <li>PCB Design</li>
+        <li>Web Development (HTML, CSS, JS)</li>
+        <li>Media Editing Tools</li>
+      </ul>
+    </div>
+    <div class="about-box">
+      <h2><img src="images/education.png" alt="Education Icon"> Education</h2>
+      <p><strong style="color:gray; font-size:1.2rem;">Toronto Metropolitan University (TMU)</strong><br>Bachelor of Electrical Engineering<br>2024 - Present</p>
+      <p><strong style="color:gray; font-size:1.2rem;">Milton District High School</strong><br>Ontario Secondary School Diploma (OSSD)<br>2020 - 2024</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer-section" id="footer-contact">
+  <p>&copy; 2025 Zaid Fahad. All rights reserved.</p>
+</div>
+
+<script>
+// Fade-in
+const intro = document.getElementById('intro');
+const boxes = document.querySelectorAll('.about-box');
+const contactBoxes = document.querySelectorAll('.contact-box');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+boxes.forEach(box => observer.observe(box));
+contactBoxes.forEach(box => observer.observe(box));
+observer.observe(intro);
+</script>
+
+</body>
+</html>
